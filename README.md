@@ -16,3 +16,10 @@ conda activate epic
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
 ```
+
+# Running the code
+
+```sh
+python src/main.py --config-name config_train # train
+python src/main.py --config-name config_explain # explain random samples from validation set
+```
