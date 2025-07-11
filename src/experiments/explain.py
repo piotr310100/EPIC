@@ -105,7 +105,7 @@ def explain_predictions(config: DictConfig):
             feature_model,
             classification_head,
             image,
-            k=config.visualization.k,
+            k=config.visualization.num_prototypical_channels,
             device=device,
         )
         image_prototypes = get_image_prototypes(
