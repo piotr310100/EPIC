@@ -80,6 +80,7 @@ This project uses [Hydra](https://hydra.cc) YAML configs to define all training 
 
 All configs can be found in the [`configs/`](./configs) folder:
 
+- `configs/config_base.yaml ` — base config containing overlapping parameters (e.g. model name)
 - `configs/config_train.yaml` — for training the prototype disentanglement module.
 - `configs/config_explain.yaml` — for generating explanations on validation samples.
 
