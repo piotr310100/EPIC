@@ -19,7 +19,7 @@ visualization:
   img_fn: none
 
 dataset:
-  datapath_train: data/imagenet-1k/val
+  datapath_train: data/imagenet-1k/train
   datapath_val: data/imagenet-1k/val
 
 dataloader:
@@ -32,7 +32,7 @@ matrix:
   type: orthogonal
 
 training:
-  num_epochs_per_prototypes: 1
+  num_epochs_per_prototypes: 2
   lr: 0.001
 
 prototypes:
@@ -41,4 +41,4 @@ prototypes:
     type: lin
     num_prototypes_start: 100
     num_prototypes_end: 5
-    num_steps: 1
+    num_steps: 10
