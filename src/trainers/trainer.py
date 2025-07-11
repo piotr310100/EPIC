@@ -103,8 +103,7 @@ class Trainer:
             print(f"Dataloader created. Starting training for n={n} prototypes.")
             self.train_prototypes(prototype_dataloader)
 
-    def plot_purity_over_epochs(self, output_path="./output"):
-        os.makedirs(output_path, exist_ok=True)
+    def plot_purity_over_epochs(self, save_file):
         epochs = np.arange(0, len(self.avg_purities))
 
         plt.figure(figsize=(10, 6))
@@ -117,7 +116,6 @@ class Trainer:
         plt.legend()
         plt.grid(True)
 
-        output_file = os.path.join(output_path, "purity_over_epochs.jpg")
-        plt.savefig(output_file, bbox_inches="tight")
+        plt.savefig(save_file, bbox_inches="tight")
         plt.close()
-        print(f"Purity plot saved to {output_file}")
+        print(f"Purity plot saved to {save_file}")

@@ -1,7 +1,7 @@
 class SchedulerBase:
-    def __init__(self, initial_value=100, final_value=5, num_steps=10, **kwargs):
-        self.initial_value = initial_value
-        self.final_value = final_value
+    def __init__(self, num_prototypes_start=100, num_prototypes_end=5, num_steps=10, **kwargs):
+        self.num_prototypes_start = num_prototypes_start
+        self.num_prototypes_end = num_prototypes_end
         self.num_steps = num_steps
 
     def get_value(self, step):

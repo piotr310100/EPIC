@@ -121,7 +121,7 @@ def train_purity(config: DictConfig):
         device,
         disentanglement_matrix(),
     )
-    plot_path = os.path.join(config.output_path, f"{config.matrix.type}_train")
+    plot_path = os.path.join(config.output_path, f"{config.matrix.type}_train.png")
     trainer.plot_purity_over_epochs(plot_path)
     prototypes_after_train = get_visualized_prototypes(
         feature_model,
