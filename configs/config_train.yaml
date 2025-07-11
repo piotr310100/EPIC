@@ -1,0 +1,44 @@
+exp:
+  run_func:
+    _target_: experiments.train.train_purity
+
+seed: 42
+output_path: outputs/resnet34
+
+hydra:
+  run:
+    dir: ${output_path}
+
+model:
+  name: resnet34
+  custom_weights_path: null
+  num_classes: 1000
+
+visualization:
+  num_prototypes: 5
+  img_fn: none
+
+dataset:
+  datapath_train: data/imagenet-1k/val
+  datapath_val: data/imagenet-1k/val
+
+dataloader:
+  batch_size: 512
+  num_workers: 4
+  pin_memory: true
+  shuffle: true
+
+matrix:
+  type: orthogonal
+
+training:
+  num_epochs_per_prototypes: 1
+  lr: 0.001
+
+prototypes:
+  purity_fn: argmax
+  scheduler:
+    type: lin
+    num_prototypes_start: 100
+    num_prototypes_end: 5
+    num_steps: 1
