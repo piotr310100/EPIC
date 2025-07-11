@@ -127,8 +127,11 @@ After training, the script saves several artifacts to the directory specified by
   - `<matrix_type>_train.png`: A plot showing how purity evolved across training epochs.
 
 - **Hydra Configuration Files**
-  - Hydra automatically saves the exact configuration used for the run under the output directory in the `./.hydra/` folder.
+  - Hydra automatically saves the exact configuration used for the run under the output directory in the `./<exp>/.hydra/` folder.
   - This includes all parameter values and overrides.
+
+- **Explanations**
+  - `Explanations`: Contains explanations for images randomly selected from validation set `{idx}.jpg`.
 
 **Note:** The names of files and folders are automatically derived from the `matrix.type` and `output_path` you specify in your config.
 
