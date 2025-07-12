@@ -52,8 +52,24 @@ pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorc
 # Install other dependencies
 pip install -r requirements.txt
 ```
+# Datasets 
+We evaluate **EPIC** on four widely used benchmarks to assess its interpretability and generalization across a diverse range of domains and visual granularities:
 
-# Datasets structure
+- **ImageNet (ILSVRC-2012)**  
+  A large-scale benchmark consisting of over 1.2 million images labeled across 1,000 object categories. ImageNet serves as the primary testbed for evaluating the global behavior of pretrained networks and the scalability of EPIC on complex, real-world visual concepts.
+
+- **Stanford Cars**  
+  A fine-grained dataset containing 16,185 images of 196 car classes. This benchmark is used to assess EPIC’s ability to localize class-representative prototypes within tightly clustered visual domains.
+
+- **Stanford Dogs**  
+  A dataset comprising 20,580 images spanning 120 dog breeds. Given the high intra-class variability and subtle inter-class differences, this dataset is ideal for testing EPIC's robustness and semantic alignment in explaining subtle visual distinctions.
+
+- **CUB-200-2011**  
+  A fine-grained bird species dataset with 11,788 images across 200 categories. We use CUB to further validate EPIC’s capacity to extract semantically meaningful and localized prototypes in challenging, high-resolution, biologically diverse settings.
+
+All datasets are used in accordance with their respective licenses. For experimental reproducibility, we follow the official train/test splits and preprocessing pipelines as described in their original publications.
+
+## Datasets structure
 
 This project expects image datasets to follow the structure required by `torchvision.datasets.ImageFolder`:
 
