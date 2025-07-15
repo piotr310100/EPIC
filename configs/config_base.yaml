@@ -1,0 +1,23 @@
+seed: 42
+
+output_path: outputs/resnet34
+
+model:
+  name: resnet34
+  custom_weights_path: null
+  num_classes: 1000
+
+dataset:
+  datapath_train: data/imagenet-1k/val
+  datapath_val: data/imagenet-1k/val
+
+dataloader:
+  batch_size: 512
+  num_workers: 4
+  pin_memory: true
+
+matrix:
+  type: orthogonal
+
+prototypes:
+  purity_fn: argmax

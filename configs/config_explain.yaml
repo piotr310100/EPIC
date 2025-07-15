@@ -1,0 +1,20 @@
+defaults:
+  - _self_
+  - config_base
+
+hydra:
+  run:
+    dir: ${output_path}/explain
+
+exp:
+  run_func:
+    _target_: experiments.explain.explain_predictions
+
+dataloader:
+  shuffle: false
+
+visualization:
+  num_explanations: 10
+  num_prototypical_channels: 4
+  num_prototypes: 4
+  img_fn: none

@@ -1,0 +1,29 @@
+defaults:
+  - _self_
+  - config_base
+
+hydra:
+  run:
+    dir: ${output_path}/train
+
+exp:
+  run_func:
+    _target_: experiments.train.train_purity
+
+dataloader:
+  shuffle: true
+
+training:
+  num_epochs_per_prototypes: 1
+  lr: 0.001
+
+visualization:
+  num_prototypes: 5
+  img_fn: none
+
+prototypes:
+  scheduler:
+    type: lin
+    num_prototypes_start: 5
+    num_prototypes_end: 5
+    num_steps: 1
