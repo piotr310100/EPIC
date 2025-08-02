@@ -8,7 +8,7 @@ model:
   num_classes: 1000
 
 dataset:
-  datapath_train: data/imagenet-1k/val
+  datapath_train: data/imagenet-1k/train
   datapath_val: data/imagenet-1k/val
 
 dataloader:
