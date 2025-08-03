@@ -14,7 +14,7 @@ dataloader:
   shuffle: true
 
 training:
-  num_epochs_per_prototypes: 1
+  num_epochs_per_prototypes: 2
   lr: 0.001
 
 visualization:
@@ -24,6 +24,6 @@ visualization:
 prototypes:
   scheduler:
     type: lin
-    num_prototypes_start: 5
+    num_prototypes_start: 100
     num_prototypes_end: 5
-    num_steps: 1
+    num_steps: 10
