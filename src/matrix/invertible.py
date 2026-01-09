@@ -8,5 +8,4 @@ class InvertibleMatrix(ParametrizedMatrix):
         return torch.matrix_exp(self.A_raw)
 
     def inverse(self):
-        M = self()
-        return torch.linalg.inv(M)
+        return torch.matrix_exp(-self.A_raw)
