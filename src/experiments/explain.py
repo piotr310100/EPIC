@@ -119,7 +119,7 @@ def explain_predictions(config: DictConfig):
         visualized_prototypes = get_visualized_prototypes(
             feature_model,
             positive_prototypes,
-            dataloader_val,
+            dataloader_train,
             channels,
             U=disentanglement_matrix(),
             device=device,
