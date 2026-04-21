@@ -159,14 +159,16 @@ After training, the script saves several artifacts to the directory specified by
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
 <h3 class="title">EPIC: Explanation of Pretrained Image Classification Networks via Prototypes</h3>
-    <pre><code>@misc{borycki2025epicexplanationpretrainedimage,
-      title={EPIC: Explanation of Pretrained Image Classification Networks via Prototype},
-      author={Piotr Borycki and Magdalena Trędowicz and Szymon Janusz and Jacek Tabor and Przemysław Spurek and Arkadiusz Lewicki and Łukasz Struski},
-      year={2025},
-      eprint={2505.12897},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.12897},
+    <pre><code>@article{EPIC2026,
+        title={EPIC: Explanation of Pretrained Image Classification Networks via Prototypes},
+        volume={40}, url={https://ojs.aaai.org/index.php/AAAI/article/view/38789},
+        DOI={10.1609/aaai.v40i21.38789},
+        number={21},
+        journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+        author={Borycki, Piotr and Trędowicz, Magdalena and Janusz, Szymon and Tabor, Jacek and Spurek, Przemysław and Lewicki, Arkadiusz and Struski, Łukasz},
+        year={2026},
+        month={Mar.},
+        pages={17366-17373},
 }
 </code></pre>
 </section>
